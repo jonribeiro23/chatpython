@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>My chat app</h1>
+    <h3>Hi {% if current_user.is_authenticated %} {{current_user.username}} {% else %} Guest {% endif %}</h3>
+
+    <div class="">
+      <ul>
+      {% for room in rooms %}
+        <li> <a href="/room/{{room._id.room_id}}">{{room.room_name}}</a> </li>
+      {% endfor %}
+      </ul>
+    </div>
+
+  </body>
+</html>

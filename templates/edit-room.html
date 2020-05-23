@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Room</h1>
+    <h3>{{message}}</h3>
+
+    <form action="/room/{{room._id}}/edit" method="POST">
+      <label>Room name</label>
+      <input type="text" name="room_name" value="{{room.room_name}}">
+      <br>
+      <label>Members</label>
+      <input type="text" name="members" value="{{room_members_str}}">
+      <br>
+      <input type="submit" name="" value="Edit">
+    </form>
+  </body>
+</html>
